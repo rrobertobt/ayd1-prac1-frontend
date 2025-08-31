@@ -1,21 +1,42 @@
 <template>
   <main>
-    <UDrawer></UDrawer>
-    <!-- <header
-      class="flex py-4 px-4 lg:px-12 lg:max-w-screen-2xl mx-auto w-full justify-between"
-    >
-      a
-    </header>
-    <USeparator></USeparator> -->
-    <div class="flex gap-x-7 lg:px-16 px-4 lg:max-w-screen-2xl mx-auto">
-      <aside class="w-64 shrink-0 hidden lg:block">
-        <h4 class="text-lg my-2 font-semibold select-none">Administración</h4>
+    <UDrawer v-model:open="openDrawer" direction="left" inset :handle="false">
+      <template #body>
+          <UButton icon="i-lucide-x" variant="link" class="p-0 block ml-auto" @click="openDrawer = false"></UButton>
+          <AdminItems />
+      </template>
 
-        <h4 class="text-lg my-2 font-semibold select-none">Módulos</h4>
+      <template #footer>
+        <UserInfo />
+      </template>
+    </UDrawer>
+
+
+    <header
+      class="flex py-3 px-4 lg:px-12 lg:max-w-screen-2xl mx-auto w-full items-center justify-between"
+    >
+    <UButton icon="i-lucide-menu" variant="link" class="block lg:hidden p-0" @click="openDrawer = !openDrawer"></UButton>
+      <NuxtLink to="/admin/home" class="hover:opacity-85 transition-opacity">
+        <strong>Taller</strong> - Administración
+      </NuxtLink>
+      <UserInfo class="max-sm:hidden"/>
+    </header>
+
+
+    <USeparator></USeparator>
+    <div class="flex gap-x-7 lg:px-16 px-4 py-2 lg:max-w-screen-2xl mx-auto">
+      <aside class="w-64 shrink-0 hidden lg:flex flex-col gap-y-4">
+        <AdminItems />
       </aside>
       <NuxtPage />
     </div>
   </main>
 </template>
-<script setup></script>
+<script setup>
+import AdminItems from '~/components/partials/nav/AdminItems.vue';
+import UserInfo from '~/components/partials/UserInfo.vue';
+
+const openDrawer = ref(false)
+
+</script>
 <style scoped></style>

@@ -1,5 +1,5 @@
 <template>
-  <UApp class="size-full" :toaster="toaster">
+  <UApp class="size-full" :toaster="toaster" :tooltip="{ delayDuration: 0 }">
     <NuxtLayout>
       <slot />
     </NuxtLayout>
