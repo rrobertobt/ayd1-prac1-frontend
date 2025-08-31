@@ -24,6 +24,11 @@
         icon: "i-lucide-users",
         to: "/admin/users",
       },
+      {
+        label: "Vehículos",
+        icon: "i-lucide-car",
+        to: "/admin/vehicles",
+      }
     ],
   ]);
 </script>
