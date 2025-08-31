@@ -3,6 +3,7 @@
 
 @theme {
   --font-sans: 'General Sans', system-ui, sans-serif;
+  --font-mono: 'Google Sans Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 :root {
