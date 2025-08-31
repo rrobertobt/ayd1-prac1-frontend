@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     },
     families: [
       { name: "General Sans", provider: "fontshare" },
+      { name: "Google Sans Code", provider: "google" },
     ],
     experimental: {
       processCSSVariables: true,
