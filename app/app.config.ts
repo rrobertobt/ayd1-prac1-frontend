@@ -1,9 +1,7 @@
-import { defineAppConfig } from "nuxt/app";
-
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: "red",
+      primary: "orange",
       neutral: "stone",
     },
   },
