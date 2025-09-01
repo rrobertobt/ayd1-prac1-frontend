@@ -30,6 +30,11 @@
         to: "/admin/vehicles",
       },
       {
+        label: "Especialidades",
+        icon: "i-lucide-briefcase",
+        to: "/admin/specialities",
+      }, 
+      {
         label: "Tipos de servicio",
         icon: "i-lucide-tag",
         to: "/admin/service-types",
