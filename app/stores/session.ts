@@ -142,11 +142,16 @@ export const useSessionStore = defineStore("session", () => {
     removeToken();
   }
 
+  const role = computed(() => {
+    return sessionObj.value?.role.toLowerCase() || "";
+  });
+
   return {
     sessionObj,
     loadingLogin,
     loading2fa,
     loggingInEmail,
+    role,
     verifyLoginCode,
     login,
     logOut,

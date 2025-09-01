@@ -24,11 +24,13 @@
 
 
     <USeparator></USeparator>
-    <div class="flex gap-x-7 lg:px-16 px-4 py-2 lg:max-w-screen-2xl mx-auto">
+    <div class="flex gap-x-7 lg:px-16 pr-4 py-2 lg:max-w-screen-2xl mx-auto">
       <aside class="w-64 shrink-0 hidden lg:flex flex-col gap-y-4">
         <AdminItems />
       </aside>
-      <NuxtPage />
+      <main class="flex-1 px-4">
+        <NuxtPage />
+      </main>
     </div>
   </main>
 </template>

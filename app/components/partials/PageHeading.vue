@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-2">
+  <div class="pt-2 pb-4">
     <UButton
       v-if="backLink && backLabel"
       :to="backLink"
@@ -13,7 +13,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import { NuxtLink } from '#components';
 import { defineProps } from 'vue';
 
 const { title, description, backLink, backLabel = 'Regresar' } = defineProps<{

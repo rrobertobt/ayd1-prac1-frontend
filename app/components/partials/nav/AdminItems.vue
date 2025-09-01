@@ -28,7 +28,12 @@
         label: "Vehículos",
         icon: "i-lucide-car",
         to: "/admin/vehicles",
-      }
+      },
+      {
+        label: "Tipos de servicio",
+        icon: "i-lucide-tag",
+        to: "/admin/service-types",
+      },
     ],
   ]);
 </script>
