@@ -5,6 +5,7 @@ export const $api = $fetch.create({
   onRequest({ options }) {
     const token = useCookie(COOKIE_TOKEN_KEY).value
     options.headers.set('session-token', `${token}`)
+    options.headers.set('sessiont-token', `${token}`)
   },
   onRequestError(error) {
   },

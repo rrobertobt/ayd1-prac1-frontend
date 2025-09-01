@@ -30,6 +30,11 @@
         to: "/admin/vehicles",
       },
       {
+        label: "Trabajos",
+        icon: "i-lucide-wrench",
+        to: "/admin/jobs",
+      },
+      {
         label: "Especialidades",
         icon: "i-lucide-briefcase",
         to: "/admin/specialities",
