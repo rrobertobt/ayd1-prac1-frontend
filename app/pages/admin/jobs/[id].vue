@@ -48,9 +48,7 @@
     <div class="flex items-center gap-4 mt-2">
       <USelect
         v-model="selectedUser"
-        :items="
-          users?.body.map((user) => ({ label: user.name, value: user.id }))
-        "
+        :items="availableUsers"
         leading-icon="i-lucide-user"
         placeholder="Selecciona un empleado"
       />
@@ -67,11 +65,19 @@
 
   const { data } = await useAsyncData(() => $api(`/admin/job/${params.id}`));
 
-  const availableUsers = ref([]);
-
+  
   const { data: users, status } = await useAsyncData(() => $api("/user/all"), {
     lazy: true,
   });
+
+  const availableUsers = computed(
+    () => {
+      if (users.value) {
+        return users.value.body.map((user) => ({ label: user.name, value: user.id }));
+      }
+      return [];
+    }
+  );
 
   const selectedUser = ref();
 
