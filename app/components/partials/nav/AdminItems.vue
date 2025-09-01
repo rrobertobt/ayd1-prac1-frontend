@@ -33,7 +33,12 @@
         label: "Especialidades",
         icon: "i-lucide-briefcase",
         to: "/admin/specialities",
-      }, 
+      },
+      {
+        label: "Repuestos",
+        icon: "i-lucide-package",
+        to: "/admin/parts",
+      },
       {
         label: "Tipos de servicio",
         icon: "i-lucide-tag",
